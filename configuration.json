@@ -3,6 +3,7 @@
   "metrics_list":"n::cpuutilization,n::cassandraReads,n::cassandraWrites,n::nodeStatus",
   "dd_options": {
     "statsd_host": "8125"
+    "statsd_port": "8125"
   },
   "ic_options": {}
 }

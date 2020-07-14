@@ -9,7 +9,7 @@ from requests.auth import HTTPBasicAuth
 import os, sys
 import json_logging, logging
 
-configFile = os.path.dirname(os.path.realpath(__file__)) + "/configuration.json"
+configFile = os.getenv("CONFIG_FILE_PATH", os.path.dirname(os.path.realpath(__file__)) + "/configuration.json")
 f = open(configFile)
 configuration = json.loads(f.read())
 f.close()
