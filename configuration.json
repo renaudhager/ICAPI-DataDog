@@ -1,15 +1,8 @@
 {
   "cluster_id":"instaclustr-cluster-id",
   "metrics_list":"n::cpuutilization,n::cassandraReads,n::cassandraWrites,n::nodeStatus",
-  "dd_options":
-  {
-    "api_key":"[datadog API key]",
-    "app_key":"[datadog app key]"
+  "dd_options": {
+    "statsd_host": "8125"
   },
-  "ic_options":
-  {
-    "user_name":"instaclustr-user-name",
-    "api_key":"instaclustr-password"
-  },
-  "tags":["tag_name:tag_value"]
+  "ic_options": {}
 }
