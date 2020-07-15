@@ -15,6 +15,10 @@ configuration = json.loads(f.read())
 f.close()
 
 # Get creds from environment variables
+if os.getenv("DD_API_KEY") is not None:
+    configuration['dd_options']['api_key'] = os.getenv("DD_API_KEY")
+if os.getenv("DD_APP_KEY") is not None:
+    configuration['dd_options']['app_key'] = os.getenv("DD_APP_KEY")
 if os.getenv("DD_STATSD_HOST") is not None:
     configuration['dd_options']['statsd_host'] = os.getenv("DD_STATSD_HOST")
 
